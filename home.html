@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-[#f4f5f7] min-h-screen">
+
+    <div class="master-parent max-w-[560px] mx-auto">
+
+
+
+        <div class="bg-white px-3 py-4 min-h-[50px] flex items-center justify-between border-b border-gray-400">
+            <div class="flex items-center">
+                <img src="assets/Group.png" alt="" class="h-12 mr-3">
+                <div>
+                    <h1 class="text-2xl font-semibold">$<span id="balanceText">0</span></h1>
+                    <p class="text-gray-500">Available Balance</p>
+                </div>
+            </div>
+            <button class="btn py-5 text-gray-500"><i
+                    class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"></i> Logout</button>
+        </div>
+
+        <div class="bg-white px-3 pb-4 rounded-b-xl pt-4">
+
+
+            <div class=" pb-6">
+                <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+                <p class="text-gray-500 text-sm mt-2">Enjoy easy and convenient financial services with us. Cashout
+                    charge
+                    is low and </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-[12px]">
+
+                <div id="addMoneyCard"
+                    class="sectionCard border border-[rgba(8,8,8,0.1)] px-2 justify-center py-3 rounded-xl flex items-center flex-col gap-2">
+                    <img src="assets/wallet1.png" alt="">
+                    <h1 class="font-semibold">Add Money</h1>
+                </div>
+
+                <div id="outMoneyCard"
+                    class="sectionCard border border-[rgba(8,8,8,0.1)] px-2 justify-center py-3 rounded-xl flex items-center flex-col gap-2">
+                    <img src="assets/send1.png" alt="">
+                    <h1 class="font-semibold">Cashout</h1>
+                </div>
+
+                <div id="transferCard"
+                    class="sectionCard border border-[rgba(8,8,8,0.1)] px-2 justify-center py-3 rounded-xl flex items-center flex-col gap-2">
+                    <img src="assets/money1.png" alt="">
+                    <h1 class="font-semibold">Transfer Money</h1>
+                </div>
+
+                <div id="getBonusCard"
+                    class="sectionCard border border-[rgba(8,8,8,0.1)] px-2 justify-center py-3 rounded-xl flex items-center flex-col gap-2">
+                    <img src="assets/bonus1.png" alt="">
+                    <h1 class="font-semibold">Get Bonus</h1>
+                </div>
+
+                <div id="payBillCard"
+                    class="sectionCard border border-[rgba(8,8,8,0.1)] px-2 justify-center py-3 rounded-xl flex items-center flex-col gap-2">
+                    <img src="assets/purse1.png" alt="">
+                    <h1 class="font-semibold">Pay Bill</h1>
+                </div>
+
+                <div id="transactionsCard"
+                    class="sectionCard border border-[rgba(8,8,8,0.1)] px-2 justify-center py-3 rounded-xl flex items-center flex-col gap-2">
+                    <img src="assets/transaction1.png" alt="">
+                    <h1 class="font-semibold">Transactions</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="all-form-section px-3 mt-4">
+            <!-- Add Money Form -->
+            <div id="addMoneyForm" class="formDiv pb-7">
+                <h2 class="font-bold ">Add Money</h2>
+                <form id="addMoneyFormSection" action="" class="bg-white rounded-2xl px-8 py-5 mt-3">
+                    <div>
+                        <h1 class="my-2 font-semibold">Select a bank</h1>
+                        <select id="bankSelect" class="select rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full">
+                            <option disabled selected>Select a bank</option>
+                            <option>IFIC</option>
+                            <option>Duch Bangla</option>
+                            <option>Sonar Bank</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Enter Account Number</h1>
+                        <input id="accountNumberBox" type="text" placeholder="Enter 11 digit account number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Ammount to Add</h1>
+                        <input id="amountToAddBox" type="text" placeholder="Add Amount to withdraw"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Pin Number</h1>
+                        <input id="pinNumberBox" type="text" placeholder="Enter 4 digit pin number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <button id="addMoneyBtn"
+                        class="btn btn-primary w-full mt-5 rounded-2xl text-lg bg-[#0874F2] border-0 shadow py-6">Add
+                        Money</button>
+
+                </form>
+            </div>
+
+            <!-- Cash Out Form -->
+            <div id="cashOutForm" class="formDiv pb-7 hidden">
+                <h2 class="font-bold">Cash Out</h2>
+                <form id="outMoneyFormSection" action="" class="bg-white rounded-2xl px-8 py-5 mt-3">
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Enter Account Number</h1>
+                        <input id="outAccNumberBox" type="text" placeholder="Enter 11 digit account number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Ammount to Add</h1>
+                        <input id="outAmountToAddBox" type="text" placeholder="Add Amount to withdraw"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Pin Number</h1>
+                        <input id="outPinNumberBox" type="text" placeholder="Enter 4 digit pin number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <button id="outMoneyBtn"
+                        class="btn btn-primary w-full mt-5 rounded-2xl text-lg bg-[#0874F2] border-0 shadow py-6">Cashout
+                        Money</button>
+
+                </form>
+            </div>
+
+            <!-- Transfer Money Form -->
+            <div id="transferForm" class="formDiv pb-7 hidden">
+                <h2 class="font-bold">Transfer Money</h2>
+                <form id="transferFormSection" action="" class="bg-white rounded-2xl px-8 py-5 mt-3">
+
+                    <div>
+                        <h1 class="my-2 font-semibold">User Account Number</h1>
+                        <input id="transferAccNumberBox" type="text" placeholder="Enter 11 digit account number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Ammount</h1>
+                        <input id="transferAmountToAddBox" type="text" placeholder="Add Amount to transfer"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Pin Number</h1>
+                        <input id="transferPinNumberBox" type="text" placeholder="Enter 4 digit pin number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <button id="transferBtn"
+                        class="btn btn-primary w-full mt-5 rounded-2xl text-lg bg-[#0874F2] border-0 shadow py-6">Cashout
+                        Money</button>
+
+                </form>
+            </div>
+
+            <!-- Get Bonus Form -->
+            <div id="getBonusForm" class="formDiv pb-7 hidden">
+                <h2 class="font-bold">Get Bonus</h2>
+                <form id="getBonusFormSection" action="" class="bg-white rounded-2xl px-8 py-5 mt-3">
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Enter Bonus Coupon</h1>
+                        <input id="getBonusCoupon" type="text" placeholder="Enter code E8855"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <button id="getBonusBtn"
+                        class="btn btn-primary w-full mt-5 rounded-2xl text-lg bg-[#0874F2] border-0 shadow py-6">Get Bonus</button>
+
+                </form>
+            </div>
+
+            <!-- Pay Bill Form -->
+            <div id="payBillForm" class="formDiv pb-7 hidden">
+                <h2 class="font-bold ">Pay Bill</h2>
+                <form id="payBillFormSection" action="" class="bg-white rounded-2xl px-8 py-5 mt-3">
+                    <div>
+                        <h1 class="my-2 font-semibold">Select To Pay</h1>
+                        <select id="payBillSelect" class="select rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full">
+                            <option disabled selected>Select back</option>
+                            <option>Gas</option>
+                            <option>Electricity</option>
+                            <option>Varsity</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Biller Account Number</h1>
+                        <input id="billAccountNumberBox" type="text" placeholder="Enter account number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Ammount to Pay</h1>
+                        <input id="billAmountToAddBox" type="text" placeholder="Add Amount to pay"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <div>
+                        <h1 class="my-2 font-semibold">Pin Number</h1>
+                        <input id="billPinNumberBox" type="text" placeholder="Enter 4 digit pin number"
+                            class="input rounded-2xl bg-[#f4f5f7] border-0 h-13 w-full" />
+                    </div>
+
+                    <button id="payBillBtn"
+                        class="btn btn-primary w-full mt-5 rounded-2xl text-lg bg-[#0874F2] border-0 shadow py-6">Pay Now</button>
+
+                </form>
+            </div>
+
+            <!-- Transactions Lists -->
+            <div id="transactionsForm" class="formDiv pb-7 hidden">
+                <div class="flex items-center justify-between">
+                    <h1 class="font-bold">Transaction History</h1>
+                    <p class="text-gray-500 text-sm">View All</p>
+                </div>
+
+                <div id="transaction-parant" class="min-h-[100px]">
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="home.js"></script>
+
+</body>
+
+</html>
