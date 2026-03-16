@@ -1,5 +1,5 @@
-const number = '01765506369'
-const pinNumber = '123456'
+const number = '017888'
+const pinNumber = '1234'
 
 document.getElementById('loginBtn').addEventListener('click',function(event){
     event.preventDefault()

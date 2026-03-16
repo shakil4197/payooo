@@ -12,26 +12,31 @@
 
 <body class="bg-[#f4f5f7] h-screen flex flex-col items-center justify-center px-6">
 
-    <div class="h-[140px] w-[320px] bg-[url(assets/bg.png)] bg-cover flex items-center justify-center">
-        <img src="assets/Group.png" alt="">
+    <div class="master-parent max-w-[560px] mx-auto">
+        <div class="h-[140px] w-[320px] bg-[url(assets/bg.png)] bg-cover flex items-center justify-center">
+            <img src="assets/Group.png" alt="">
+        </div>
+
+        <form action="" class="bg-white rounded-xl p-5 w-full shadow-lg">
+            <div>
+                <label for="" class="font-semibold">Mobile number (017888)</label>
+                <br>
+                <input id="mobileBox" type="text" placeholder="Type here"
+                    class="input bg-[#f4f5f7] px-4 py-6 rounded-4xl mt-3 w-full" />
+            </div>
+
+            <div class="mt-5">
+                <label for="" class="font-bold">4 Digit pin (1234)</label>
+                <br>
+                <input id="pinBox" type="text" placeholder="Type here"
+                    class="input bg-[#f4f5f7] px-4 py-6 rounded-4xl mt-3 w-full" />
+            </div>
+
+            <button id="loginBtn"
+                class="btn btn-primary mt-5 w-full font-bold text-xl px-5 py-6 bg-[#0874F2] border-0 rounded-4xl">Login</button>
+
+        </form>
     </div>
-    
-    <form action="" class="bg-white rounded-xl p-5 w-full shadow-lg">
-        <div>
-            <label for="" class="font-semibold">Mobile number</label>
-            <br>
-            <input id="mobileBox" type="text" placeholder="Type here" class="input bg-[#f4f5f7] px-4 py-6 rounded-4xl mt-3" />
-        </div>
-
-        <div class="mt-5">
-            <label for="" class="font-bold">4 Digit pin</label>
-            <br>
-            <input id="pinBox" type="text" placeholder="Type here" class="input bg-[#f4f5f7] px-4 py-6 rounded-4xl mt-3"/>
-        </div>
-
-        <button id="loginBtn" class="btn btn-primary mt-5 w-full font-bold text-xl px-5 py-6 bg-[#0874F2] border-0 rounded-4xl">Login</button>
-
-    </form>
 
     <script src="script.js"></script>
 </body>
