@@ -274,6 +274,8 @@ document.getElementById('getBonusBtn').addEventListener('click', function (e) {
         currentBalance.innerText = current + 500
         isGetCoupn = isGetCoupn + 1
 
+        alert('You get $500 bonus')
+
         getBonusFormSection.reset()
     }
 
